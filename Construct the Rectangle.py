@@ -26,4 +26,7 @@ class Solution:
         while area % mid != 0: mid -= 1
         return [int(area/mid),mid]
 
-        
+        # Solution 4
+        for l in range(int(area**0.5), 0, -1):            
+        if area % l == 0: 
+            return [area // l, l]
