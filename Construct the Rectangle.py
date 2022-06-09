@@ -20,3 +20,10 @@ class Solution:
         while area % w != 0:
             w -= 1
         return area//w, w
+
+        # Solution 3
+        mid = int(math.sqrt(area))
+        while area % mid != 0: mid -= 1
+        return [int(area/mid),mid]
+
+        
