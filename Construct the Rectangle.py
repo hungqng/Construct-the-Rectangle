@@ -14,3 +14,9 @@ class Solution:
             if area % mid == 0:
                 return [int(area / mid), int(mid)]
             mid -= 1
+
+        # Solution 2
+        w = int(math.sqrt(area))
+        while area % w != 0:
+            w -= 1
+        return area//w, w
